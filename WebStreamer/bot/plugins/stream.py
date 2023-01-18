@@ -29,5 +29,5 @@ async def media_receive_handler(_, m: Message):
     await m.reply_text(
         text=f"{stream_link}",
         quote=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Learn something interesting 🤔', url=stream_links)]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Learn something interesting 🤔', url=stream_link)]])
     )
