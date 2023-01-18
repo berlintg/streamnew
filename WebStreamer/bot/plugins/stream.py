@@ -27,7 +27,7 @@ async def media_receive_handler(_, m: Message):
     log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
     stream_link = Var.URL + str(log_msg.message_id) + '/' +quote_plus(file_name) if file_name else ''
     await m.reply_text(
-        text=f"{stream_link}",
+        text=f"link = {stream_link}",
         quote=True,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Learn something interesting 🤔', url=stream_link)]])
     )
